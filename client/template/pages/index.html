@@ -1,0 +1,10 @@
+<template name= "index">
+  <div class = "row lightBackground vpadding-15">
+    <div class = "col-xs-4">NHP</div>
+    </div>
+  {{#each NHPList}}
+    <div class = "row lightBackground bpadding-15">
+            <div class="col-xs-4"><a href = "{{pathFor 'NHPView'}}" class="discuss btn btn-default">{{NHPName}}</a></div>
+    </div>
+  {{/each}}
+</template>

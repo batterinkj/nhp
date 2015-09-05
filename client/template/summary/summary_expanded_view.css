@@ -1,0 +1,49 @@
+#studyinfo {
+    border: 1px solid black;
+    margin: 0 auto;
+    width: 90%;
+    padding: 0 15px;
+	position:relative;
+}
+.summaryExpandedRow:nth-of-type(odd){
+	background-color:rgba(152, 255, 195, 0.59);
+}
+.summaryExpandedRow:nth-of-type(even){
+	background-color:#FFFFFF;
+}
+
+.summaryExpandedContainer{
+    border: 1px solid black;
+}
+
+.summaryExpandedRow>div:first-child{
+    font-weight:600;
+}
+
+#closeSummaryExpanded{
+  position: absolute;
+  border-left: 1px solid black;
+  top: 0px;
+  right: 0px;
+  border-bottom: 1px solid black;
+  font-weight: 900;
+  cursor: pointer;
+  width: 20px;
+  text-align: center;
+  height: 20px;
+  z-index: 100;
+}
+
+#editSummaryExpanded{
+  position: absolute;
+  border-left: 1px solid black;
+  top: 0px;
+  right: 20px;
+  border-bottom: 1px solid black;
+  font-weight: 900;
+  cursor: pointer;
+  width: 40px;
+  text-align: center;
+  height: 20px;
+  z-index: 100;
+}

@@ -1,0 +1,128 @@
+<template name="NHPView">
+    <div class = "row lightBackground relative">
+    {{#with NHP}}
+        <div class = "NHPTitle">
+            <div>{{{NHPName}}}</div>
+        </div>
+                
+        <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#monograph">Monograph</a></li>
+          <li><a data-toggle="tab" href="#literature">Literature Summaries</a></li>
+          <li><a data-toggle="tab" href="#references">References</a></li>
+        </ul>
+        
+        <div class="tab-content">
+          
+          <div id="monograph" class="tab-pane fade in active">
+            <div class = "monographContainer hpadding-15">
+                <div class = "monographHeader">Safety</div>
+                <div class = "row">
+                    <div class = "col-xs-3"></div>
+                    <div class = "col-xs-2">
+                        <div>CKD</div>
+                        <div>
+                            <img src = "{{CKDSafetyImage}}"/>
+                        </div>
+                    </div>
+                    <div class = "col-xs-2">
+                        <div>HD-PD</div>
+                        <div>
+                            <img src = "{{HDPDSafetyImage}}"/>
+                        </div>
+                    </div>
+                    <div class = "col-xs-2">
+                        <div>Transplant</div>
+                        <div>
+                            <img src = "{{transplantSafetyImage}}"/>
+                        </div>
+                    </div>
+                    <div class = "col-xs-3"></div>
+                </div>
+            </div>
+            <div class = "monographContainer hpadding-15">
+                <div class = "monographHeader">Dosing</div>
+                <div class = "row">
+                    <div class = "col-xs-3">CKD Dosing</div>
+                    <div class = "col-xs-9">{{{dosing.CKD}}}</div>
+                </div>
+                <div class = "row">
+                    <div class = "col-xs-3">HD-PD Dosing</div>
+                    <div class = "col-xs-9">{{{dosing.HDPD}}}</div>
+                </div>
+                <div class = "row">
+                    <div class = "col-xs-3">Transplant Dosing</div>
+                    <div class = "col-xs-9">{{{dosing.transplant}}}</div>
+                </div>
+            </div>
+            <div class = "monographContainer hpadding-15">
+                <div class = "monographHeader">Pharmacokinetics</div>
+                <div class = "row">
+                    <div class = "col-xs-3">Molecular Weight</div>
+                    <div class = "col-xs-9">{{{pk.MW}}}</div>
+                </div>
+                <div class = "row">
+                    <div class = "col-xs-3">Volume of Distribution</div>
+                    <div class = "col-xs-9">{{{pk.VD}}}</div>
+                </div>
+                <div class = "row">
+                    <div class = "col-xs-3">Protein Binding</div>
+                    <div class = "col-xs-9">{{{pk.proteinBinding}}}</div>
+                </div>
+                <div class = "row">
+                    <div class = "col-xs-3">Metabolism</div>
+                    <div class = "col-xs-9">{{{pk.metabolism}}}</div>
+                </div>
+                <div class = "row">
+                    <div class = "col-xs-3">Renal Clearance</div>
+                    <div class = "col-xs-9">{{{pk.renalClearance}}}</div>
+                </div>
+            </div>
+            <div class = "monographContainer hpadding-15">
+                <div class = "monographHeader">Adverse Effects</div>
+                <div class = "row">
+                    <div class = "col-xs-3">Nephrotoxic Effects</div>
+                    <div class = "col-xs-9">{{{adverseEffects.nephrotoxic}}}</div>
+                </div>
+                <div class = "row">
+                    <div class = "col-xs-3">Other</div>
+                    <div class = "col-xs-9">{{{adverseEffects.other}}}</div>
+                </div>
+            </div>
+            <div class = "monographContainer hpadding-15">
+                <div class = "monographHeader">Pharmacokinetics</div>
+                <div class = "row">
+                    <div class = "col-xs-3">General</div>
+                    <div class = "col-xs-9">{{{DI.general}}}</div>
+                </div>
+                <div class = "row">
+                    <div class = "col-xs-3">Immunomodulatory</div>
+                    <div class = "col-xs-9">{{{DI.immunomodulatory}}}</div>
+                </div>
+                <div class = "row">
+                    <div class = "col-xs-3">CYP450</div>
+                    <div class = "col-xs-9">{{{DI.CYP450}}}</div>
+                </div>
+            </div>
+            
+          </div>
+          <div id="literature" class="tab-pane fade">
+            <div class = "hpadding-15">    
+                {{#each summaries}}
+                    {{>summaryView}}
+                {{/each}}
+            </div>
+          </div>
+          <div id="references" class="tab-pane fade">
+            <div class ="referencesContainer padding-15">
+                <ol>
+                    {{#each references}}
+                        {{>referenceItem}}
+                    {{/each}}
+                </ol>
+            </div>
+          </div>
+        </div>
+
+    {{/with}}
+    </div>
+</template>

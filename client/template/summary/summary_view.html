@@ -1,0 +1,7 @@
+<template name="summaryView">
+    {{#if activeSummary}}
+        <div class = "summaryViewContainer borderDefault relative">{{>summaryExpandedView}}</div>
+    {{else}}
+        <div class = "summaryViewContainer"><h1>{{title}}</h1> </div>
+    {{/if}}
+</template>

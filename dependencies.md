@@ -1,0 +1,15 @@
+meteor add twbs:bootstrap
+meteor add underscore
+meteor add iron:router
+meteor remove insecure
+meteor remove autopublish
+meteor add ian:accounts-ui-bootstrap-3
+meteor add accounts-password
+meteor add aldeed:autoform
+meteor add aldeed:simple-schema
+meteor add mpowaga:autoform-summernote
+meteor add fortawesome:fontawesome
+meteor add mizzao:autocomplete
+meteor add yogiben:admin
+meteor add alanning:roles
+meteor add dburles:collection-helpers

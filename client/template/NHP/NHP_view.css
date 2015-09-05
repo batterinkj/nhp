@@ -1,0 +1,41 @@
+.NHPTitle{
+	background-color: #2cb298;
+	color:#FFFFFF;
+	font-size:3em;
+	padding-left:30px;
+	margin-right:-15px;
+	display:inline-block;
+	width:100%;
+}
+.NHPTitle>div{
+	float:left;
+	padding-right:30px;
+}
+.NHPTitle img{
+	width:40px;
+	height:40px;
+}
+
+.monographHeader{
+	background: transparent url(expand-arrow.png) no-repeat;
+	background-position: 18px 5px;
+	text-indent: 15px;
+	background-size: 10px 10px;
+	font-weight: 600;
+	/* background-color: #600000; */
+	margin-left: -30px;
+	margin-right: -15px;
+	padding-left: 15px;
+	padding-right: 30px;
+	font-size:1.4em;
+}
+
+.monographContainer:nth-of-type(even){
+	background-color:rgba(152, 255, 195, 0.59);
+}
+.monographContainer:nth-of-type(odd){
+	background-color:#FFFFFF;
+}
+.monographContainer>.row>div:first-child{
+	font-weight: 600;
+}

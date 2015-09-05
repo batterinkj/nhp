@@ -1,0 +1,11 @@
+<template name = "search">
+  <div class = "text-center">
+    <div class = "relative searchContainer">
+        {{> inputAutocomplete settings=settings id="drugSearch" class="input-xlarge" placeholder="Search..."}}
+    </div>
+  </div>
+</template>
+
+<template name="userPill">
+    <span class="label">{{NHPName}}</span>
+</template>
